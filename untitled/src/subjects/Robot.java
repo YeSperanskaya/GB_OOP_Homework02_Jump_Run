@@ -6,13 +6,14 @@ public class Robot extends Subject implements Jump, Run{
         super.maxJumpDistance = maxJumpDistance;
     }
 
-    @Override
-    public void jump() {
 
+    @Override
+    public boolean jump(Wall wall) {
+        return false;
     }
 
     @Override
-    public void run() {
+    public void run(Track track) {
 
     }
 }

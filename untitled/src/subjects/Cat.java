@@ -7,12 +7,12 @@ public class Cat extends Subject implements Jump, Run{
     }
 
     @Override
-    public void jump() {
-
+    public boolean jump(Wall wall) {
+        return false;
     }
 
     @Override
-    public void run() {
+    public void run(Track track) {
 
     }
 }

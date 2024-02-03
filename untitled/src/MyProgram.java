@@ -1,3 +1,14 @@
+import subjects.Track;
+import subjects.Wall;
+import subjects.Cat;
+import subjects.Human;
+import subjects.Robot;
+import subjects.Subject;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 /**
  * Домашнее задание на закрепление :
  *
@@ -15,6 +26,15 @@
 
 public class MyProgram {
     public static void main(String[] args) {
+        Subject man = new Human(100, 50);
+        Subject cat = new Cat(25, 70);
+        Subject robot = new Robot(3, 23);
+        List<Subject> personsArray = new ArrayList(Arrays.asList(man, cat, robot));
+        Wall wall50 = new Wall(50);
+        Track track25 = new Track(25);
+        List obstructions = new ArrayList<>(Arrays.asList(wall50, track25));
+
+
 
     }
 }
