@@ -1,18 +1,8 @@
 package subjects;
 
-public class Cat extends Subject implements Jump, Run{
-    public Cat(int maxRunDistatnce, int maxJumpDistance) {
-        super.maxRunDistatnce = maxRunDistatnce;
-        super.maxJumpDistance = maxJumpDistance;
-    }
+public class Cat extends Subject{
 
-    @Override
-    public boolean jump(Wall wall) {
-        return false;
-    }
-
-    @Override
-    public void run(Track track) {
-
+    public Cat(String name, int maxRunDistatnce, int maxJumpDistance) {
+        super(name, maxRunDistatnce, maxJumpDistance);
     }
 }

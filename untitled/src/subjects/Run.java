@@ -1,5 +1,5 @@
 package subjects;
 
 public interface Run {
-    public void run(Track track);
+    public boolean run(Track track);
 }

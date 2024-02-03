@@ -26,14 +26,31 @@ import java.util.List;
 
 public class MyProgram {
     public static void main(String[] args) {
-        Subject man = new Human(100, 50);
-        Subject cat = new Cat(25, 70);
-        Subject robot = new Robot(3, 23);
+        Subject man = new Human("Вася",100, 50);
+        Subject cat = new Cat("Барсик",25, 30);
+        Subject robot = new Robot("Десиптикон", 1000, 100);
         List<Subject> personsArray = new ArrayList(Arrays.asList(man, cat, robot));
-        Wall wall50 = new Wall(50);
-        Track track25 = new Track(25);
-        List obstructions = new ArrayList<>(Arrays.asList(wall50, track25));
+        Wall wall = new Wall(80);
+        Track track = new Track(500);
+        List obstructions = new ArrayList<>(Arrays.asList(wall, track));
+        boolean isPassed;
+        for (int i = 0; i < personsArray.size(); i++) {
+            for (int j = 0; j < obstructions.size(); j++) {
+                if (obstructions.get(j) instanceof Wall) {
+                    isPassed = personsArray.get(i).jump((Wall) obstructions.get(j));
+                    if (!isPassed) {
+                        break;
+                    }
+                } else if (obstructions.get(j) instanceof Track) {
+                    isPassed = personsArray.get(i).run((Track) obstructions.get(j));
+                    if (!isPassed) {
+                        break;
+                    }
 
+                }
+
+            }
+        }
 
 
     }
